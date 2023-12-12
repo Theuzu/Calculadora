@@ -6,8 +6,36 @@ function Calculadora(numero1, numero2, operador) {
   num1 = parseFloat(numero1)
   num2 = parseFloat(numero2)
 
-  
+
+  switch (operador) {
+
+    case "+":
+
+      result = num1 + num2
+      break;
+
+    case "-":
+
+      result = num1 - num2
+      break;
+
+    case "*":
+
+      result = num1 * num2
+      break;
+
+    case "/":
+
+      result = num1 / num2
+
+      break;
+
+    case "e":
+
+      break;
+
   }
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
