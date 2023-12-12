@@ -32,6 +32,17 @@ function Calculadora(numero1, numero2, operador) {
 
     case "e":
 
+      if (num2 === 0) {
+        result = 1
+      }
+
+      for (let i = 1; i <= num2; i++) {
+        resultado *= num1;
+      }
+
+      if (num2 < 0) {
+        resultado = 1 / resultado
+      }
       break;
 
   }
