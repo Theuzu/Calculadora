@@ -3,49 +3,46 @@
 
 //ESCREVA SEU CÓDIGO AQUI!!
 function Calculadora(numero1, numero2, operador) {
-  num1 = parseFloat(numero1)
-  num2 = parseFloat(numero2)
-
+  let resultado;
+  num1 = parseFloat(numero1);
+  num2 = parseFloat(numero2);
 
   switch (operador) {
-
     case "+":
-
-      result = num1 + num2
+      resultado = num1 + num2;
       break;
 
     case "-":
-
-      result = num1 - num2
+      resultado = num1 - num2;
       break;
 
     case "*":
-
-      result = num1 * num2
+      resultado = num1 * num2;
       break;
 
     case "/":
-
-      result = num1 / num2
+      resultado = num1 / num2;
 
       break;
 
     case "e":
 
       if (num2 === 0) {
-        result = 1
+        resultado = 1;
       }
+      resultado = 1;
 
       for (let i = 1; i <= num2; i++) {
-        resultado *= num1;
+        resultado = resultado *  num1;
       }
-
-      if (num2 < 0) {
-        resultado = 1 / resultado
-      }
+      
       break;
-
   }
+  if (resultado == undefined || resultado > 1000000) {
+    resultado = "ERRO";
+  }
+
+  return resultado;
 }
 
 
